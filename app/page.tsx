@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20">
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 pt-32">
         <div className="max-w-6xl w-full mx-auto text-center">
           {/* Logo */}
           <div className="mb-12">
@@ -18,6 +18,11 @@ export default function Home() {
               priority
             />
           </div>
+
+          {/* Charity badge */}
+          <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-6">
+            Registered Charity No. 1217001
+          </p>
 
           {/* Main Heading */}
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-slate-900 mb-6 tracking-tight">
@@ -43,13 +48,6 @@ export default function Home() {
             >
               Get in Touch
             </a>
-            <a
-              href="https://admin.agora.akn.org.uk"
-              className="px-8 py-4 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-all hover:scale-105 shadow-lg"
-            >
-              Charity & Staff Login
-            </a>
-
           </div>
         </div>
 
@@ -233,27 +231,34 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Launch Timeline</h3>
+              <h3 className="text-2xl font-bold mb-6">Milestones</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-3 h-3 bg-white rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-green-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <p className="font-semibold text-lg">May 2025</p>
-                    <p className="text-slate-300">Launch in Slough with Slough Refugee Support</p>
+                    <p className="font-semibold text-lg">2025 — Launched</p>
+                    <p className="text-slate-300">Pilot launch in Slough with Slough Refugee Support</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-3 h-3 bg-white rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-green-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <p className="font-semibold text-lg">December 2025</p>
-                    <p className="text-slate-300">National expansion through charity partnerships</p>
+                    <p className="font-semibold text-lg">February 2026 — Registered Charity</p>
+                    <p className="text-slate-300">Granted charity status in England & Wales (No. 1217001)</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-3 h-3 bg-white rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-white/40 rounded-full mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <p className="font-semibold text-lg">Mid-2026</p>
-                    <p className="text-slate-300">International rollout: Hong Kong, United States</p>
+                    <p className="font-semibold text-lg">2026 — National Expansion</p>
+                    <p className="text-slate-300">Growing through charity partnerships across the UK</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-3 h-3 bg-white/40 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-semibold text-lg">Beyond — International</p>
+                    <p className="text-slate-300">Rollout to Hong Kong, United States, and beyond</p>
                   </div>
                 </div>
               </div>
@@ -292,28 +297,6 @@ export default function Home() {
           <ContactButton />
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 px-6 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-6xl mx-auto text-center">
-          <Image
-            src="/logo.svg"
-            alt="Agora Logo"
-            width={60}
-            height={60}
-            className="mx-auto mb-6 opacity-80"
-          />
-          <p className="text-slate-600 mb-2">
-            &copy; {new Date().getFullYear()} Agora. All rights reserved.
-          </p>
-          <p className="text-slate-500 text-sm mb-2">
-            Made with love by John Buchan, Zain Carrimjee, Ahnaf Kabir, and Sandy Riddick
-          </p>
-          <p className="text-slate-500 text-sm">
-            an akn innovation
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
