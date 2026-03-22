@@ -3,31 +3,50 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-12 px-6 bg-slate-50 border-t border-slate-200">
-      <div className="max-w-6xl mx-auto text-center">
-        <Image
-          src="/logo.svg"
-          alt="Agora Logo"
-          width={48}
-          height={48}
-          className="mx-auto mb-4 opacity-70"
-        />
-        <p className="text-slate-900 font-semibold mb-1">Agora</p>
-        <p className="text-slate-500 text-sm mb-4">
-          Registered Charity No. 1217001 &middot; England & Wales
-        </p>
-        <div className="flex justify-center gap-6 text-sm text-slate-500 mb-6">
-          <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
-          <Link href="/team" className="hover:text-slate-900 transition-colors">Team</Link>
-          <a href="/#contact" className="hover:text-slate-900 transition-colors">Get Involved</a>
-          <a href="https://admin.agora.akn.org.uk" className="hover:text-slate-900 transition-colors">Staff Login</a>
+    <footer className="border-t border-slate-100 bg-white">
+      <div className="max-w-6xl mx-auto px-6 py-12 grid sm:grid-cols-3 gap-10">
+        {/* Brand */}
+        <div>
+          <Link href="/" className="flex items-center gap-2.5 mb-3 group w-fit">
+            <Image src="/logo.svg" alt="Agora Logo" width={24} height={24} className="opacity-70 group-hover:opacity-100 transition-opacity" />
+            <span className="font-bold text-slate-900 text-sm">Agora</span>
+          </Link>
+          <p className="text-xs text-slate-400 leading-relaxed">
+            Registered Charity No. 1217001<br />
+            England &amp; Wales
+          </p>
         </div>
-        <p className="text-slate-400 text-xs mb-1">
-          &copy; {new Date().getFullYear()} Agora. All rights reserved.
-        </p>
-        <p className="text-slate-400 text-xs">
-          an <a href="https://akn.org.uk" className="hover:text-slate-600 transition-colors">akn</a> innovation
-        </p>
+
+        {/* Nav */}
+        <div>
+          <p className="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-4">Navigate</p>
+          <div className="flex flex-col gap-3 text-sm text-slate-500">
+            <Link href="/" className="hover:text-slate-900 transition-colors w-fit">Home</Link>
+            <Link href="/team" className="hover:text-slate-900 transition-colors w-fit">Team</Link>
+            <a href="/#contact" className="hover:text-slate-900 transition-colors w-fit">Get Involved</a>
+          </div>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <p className="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-4">Organisation</p>
+          <div className="flex flex-col gap-3 text-sm text-slate-500">
+            <a href="https://admin.agora.akn.org.uk" className="hover:text-slate-900 transition-colors w-fit">Staff Login</a>
+            <a href="https://akn.org.uk" className="hover:text-slate-900 transition-colors w-fit">akn.org.uk</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-slate-100">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <p className="text-xs text-slate-400">
+            &copy; {new Date().getFullYear()} Agora. All rights reserved.
+          </p>
+          <p className="text-xs text-slate-300">
+            an akn innovation
+          </p>
+        </div>
       </div>
     </footer>
   );
